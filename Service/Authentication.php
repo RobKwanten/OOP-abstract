@@ -42,7 +42,7 @@ class Authentication
         if ( $login_ok )
         {
             session_start();
-            if  ($data['profile'] == 'admin'){
+            if  ($row['usr_profile'] == 'Admin'){
                 $User = new admin();
             } else {
                 $User = new gebruiker();
