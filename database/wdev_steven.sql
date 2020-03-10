@@ -134,12 +134,13 @@ CREATE TABLE `users` (
   `usr_pasfoto` varchar(512) DEFAULT NULL,
   `usr_vz_eid` varchar(512) DEFAULT NULL,
   `usr_az_eid` varchar(512) DEFAULT NULL,
+  `usr_profile` varchar(512) DEFAULT 'user',
   PRIMARY KEY (`usr_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('24', 'Steven', 'De Ryck', 'steven@syntra.be', '$2y$10$7N0RWTAK2HrM4D1zK8sFJeVwmm0lEKZd.NkwNgApUHjwBjcjvUuLG', 'Oude baan', '2', '', '2800', 'Mechelen', '03 255 55 55', null, null, null);
-INSERT INTO `users` VALUES ('25', 'Steven', 'Peeters', 'steven@fedgov.be', '$2y$10$yFiiGhLt58RDkzw/yd29dexmnJstl74fCRFYXX4yMGvHOETBzeaxa', 'Wetstraat', '16', '', '1000', 'Brussel', '02 222 22 22', null, null, null);
-INSERT INTO `users` VALUES ('26', 'Bert', 'Peeters', 'bert@inform.be', '$2y$10$d5HyBPOTtxYnE./7IQDWWOu/EQyfh/d33BCUFNDgTJNYHcIC61TQ2', '', '', '', '', '', '', 'pasfoto_26.jpg', 'eidvoor_26.jpg', 'eidachter_26.jpg');
+INSERT INTO `users` VALUES ('24', 'Steven', 'De Ryck', 'steven@syntra.be', '$2y$10$7N0RWTAK2HrM4D1zK8sFJeVwmm0lEKZd.NkwNgApUHjwBjcjvUuLG', 'Oude baan', '2', '', '2800', 'Mechelen', '03 255 55 55', null, null, null,'Admin');
+INSERT INTO `users` VALUES ('25', 'Steven', 'Peeters', 'steven@fedgov.be', '$2y$10$yFiiGhLt58RDkzw/yd29dexmnJstl74fCRFYXX4yMGvHOETBzeaxa', 'Wetstraat', '16', '', '1000', 'Brussel', '02 222 22 22', null, null, null,default);
+INSERT INTO `users` VALUES ('26', 'Bert', 'Peeters', 'bert@inform.be', '$2y$10$d5HyBPOTtxYnE./7IQDWWOu/EQyfh/d33BCUFNDgTJNYHcIC61TQ2', '', '', '', '', '', '', 'pasfoto_26.jpg', 'eidvoor_26.jpg', 'eidachter_26.jpg',default);
