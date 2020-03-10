@@ -12,6 +12,9 @@ require_once $_root_folder . "/Model/gebruiker.php";
 require_once $_root_folder . "/Model/admin.php";
 
 //load Services
+require_once $_root_folder . "/Service/CityLoaderInterface.php";
+require_once $_root_folder . "/Service/PdoCityLoader.php";
+require_once $_root_folder . "/Service/JsonCityLoader.php";
 require_once $_root_folder . "/Service/Authentication.php";
 require_once $_root_folder . "/Service/CityLoader.php";
 require_once $_root_folder . "/Service/Container.php";

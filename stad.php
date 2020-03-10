@@ -14,7 +14,7 @@ $VS->BasicHead( $css );
     <div class="row">
 
         <?php
-        $cities = $Container->getCityLoader()->Load( $id = $_GET['id'] );
+        $cities = $Container->getPdoCityLoader()->Load( $id = $_GET['id'] );
         $template = $VS->LoadTemplate("stad");
 
         print $VS->ReplaceCities( $cities, $template);

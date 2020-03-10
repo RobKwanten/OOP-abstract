@@ -60,10 +60,10 @@ class Container
     /**
      * @return CityLoader
      */
-    public function getCityLoader()
+    public function getPdoCityLoader()
     {
         if ( $this->cityLoader === null ){
-            $this->cityLoader = new CityLoader( $this->getDBM() );
+            $this->cityLoader = new PdoCityLoader( $this->getDBM() );
         }
         return $this->cityLoader;
     }    

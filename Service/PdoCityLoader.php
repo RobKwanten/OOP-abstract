@@ -1,5 +1,6 @@
 <?php
-class CityLoader 
+
+class PdoCityLoader implements CityLoaderInterface
 {
     private $DBM;
 
@@ -8,19 +9,16 @@ class CityLoader
         $this->DBM = $DBM;
     }
 
-    public function LoadCityPopulation($id)
-    {
-        print 'hallo $id';
-    }
 
 
-
-    public function Load( $id = null )
+    public function fetchAllCitiesData( $id = null )
     {
         $cities = array();
 
         $sql = "select * from images";
-        if ( $id > 0 ) $sql .= " where img_id=$id";
+        if ( $id > 0 ){
+            $sql .= " where img_id=$id";
+        }
 
         $data = $this->DBM->GetData($sql);
         foreach ( $data as $row )
