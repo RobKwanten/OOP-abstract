@@ -31,6 +31,7 @@ class Authentication
         $sql = "SELECT * FROM users WHERE usr_login='" . $login . "' ";
         $data = $this->DBM->GetData($sql);
 
+      
         if ( count($data) == 1 )
         {
             $row = $data[0];
@@ -41,12 +42,15 @@ class Authentication
         if ( $login_ok )
         {
             session_start();
-            $User = new User();
+            if  ($data['profile'] == 'admin'){
+                $User = new admin();
+            } else {
+                $User = new gebruiker();
+            }
             $User->Load($row);
 
             $_SESSION['usr'] = $User;
             $this->LogLoginUser();
-
             return true;
         }
 

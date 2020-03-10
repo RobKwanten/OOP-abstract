@@ -1,13 +1,15 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . "/testremote/Model/Config.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/testremote_new3/Model/Config.php";
 
-$config = new Config( $path = "/testremote" );
+$config = new Config( $path = "/testremote_new3" );
 $_application_folder = $config->getApplicationFolder();
 $_root_folder = $config->getRootFolder();
 
 //load Models
 require_once $_root_folder . "/Model/City.php";
 require_once $_root_folder . "/Model/User.php";
+require_once $_root_folder . "/Model/gebruiker.php";
+require_once $_root_folder . "/Model/admin.php";
 
 //load Services
 require_once $_root_folder . "/Service/Authentication.php";

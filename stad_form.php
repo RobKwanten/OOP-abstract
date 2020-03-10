@@ -1,6 +1,10 @@
 <?php
 require_once "lib/autoload.php";
 
+if ($_SESSION["usr"]->getAccess() == 0){
+    header("Location: " . $config->getApplicationFolder() . "/steden.php");
+}
+
 $css = array( "style.css" );
 $VS->BasicHead( $css );
 ?>

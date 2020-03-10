@@ -1,5 +1,5 @@
 <?php
-class User
+abstract class User
 {
     private $id;
     private $voornaam;
@@ -15,6 +15,40 @@ class User
     private $pasfoto;
     private $vz_eid;
     private $az_eid;
+    private $profile;
+    private $access;
+
+    /**
+     * @return mixed
+     */
+    public function getAccess()
+    {
+        return $this->access;
+    }
+
+    /**
+     * @param mixed $access
+     */
+    public function setAccess($access)
+    {
+        $this->access = $access;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getProfile()
+    {
+        return $this->profile;
+    }
+
+    /**
+     * @param mixed $profile
+     */
+    public function setProfile($profile)
+    {
+        $this->profile = $profile;
+    }
 
     /**
      * @return integer
@@ -256,6 +290,7 @@ class User
         $this->pasfoto = $row['usr_pasfoto'];
         $this->vz_eid = $row['usr_vz_eid'];
         $this->az_eid = $row['usr_az_eid'];
+        $this->profile = $row['usr_profile'];
     }
 
 }
